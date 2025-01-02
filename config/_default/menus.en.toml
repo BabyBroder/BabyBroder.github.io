@@ -1,0 +1,18 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "Broder"
+pre = "telegram"
+url = "https://t.me/odanbroder"
+identifier = "xjbHd89Rrz"
+weight = 1
+
+[[footer]]
+none = "none"
+
+[[footer]]
+name = "Broder"
+url = "https://github.com/BabyBroder"
+identifier = "DnxHxrR2Ba"
+weight = 9999
