@@ -13,7 +13,7 @@ smartTOC = true
 highlightCurrentMenuArea = true
 
 [header]
-layout = "basic"
+layout = "fixed"
 
 [footer]
 showMenu = true
@@ -24,13 +24,13 @@ showScrollToTop = true
 
 [homepage]
 layout = "background"
-showRecent = "Enable"
-showRecentItems = "5"
-showMoreLink = "Enable"
+showRecent = true
+showRecentItems = 6
+showMoreLink = true
 showMoreLinkDest = "/posts/"
-cardView = "Enable"
-cardViewScreenWidth = "cardViewScreenWidth"
-layoutBackgroundBlur = "Enable"
+cardView = false
+cardViewScreenWidth = false
+layoutBackgroundBlur = true
 homepageImage = "img/homepages/alone.jpg"
 
 [article]
@@ -39,38 +39,44 @@ showViews = false
 showLikes = false
 showDateOnlyInArticle = false
 showDateUpdated = false
-showAuthor = "show"
-showHero = false
+showAuthor = true
+showHero = true
+heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = false
 showDraftLabel = true
 showEdit = false
+# editURL = "https://github.com/username/repo/"
 editAppendPath = true
 seriesOpened = false
 showHeadingAnchors = true
 showPagination = true
 invertPagination = false
 showReadingTime = true
-showTableOfContents = false
+showTableOfContents = true
 showTaxonomies = false
 showAuthorsBadges = false
 showWordCount = true
 showZenMode = false
+showRelatedContent = true
+relatedContentLimit = 3
+sharingLinks = [ "twitter", "telegram"]
 
 [list]
-showHero = false
+showHero = true
+heroStyle = "background"
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = false
-showSummary = false
-showViews = false
+showSummary = true
+showViews = true
 showLikes = false
-showTableOfContents = false
-showCards = false
+showTableOfContents = true
+showCards = true
 orderByWeight = false
 groupByYear = true
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 constrainItemsWidth = false
 

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Doan Duc Anh</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Doan Duc Anh</description>
+    <title>Jailbreak on Doan Duc Anh</title>
+    <link>http://localhost:1313/tags/jailbreak/</link>
+    <description>Recent content in Jailbreak on Doan Duc Anh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Doan Duc Anh was here</copyright>
-    <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/jailbreak/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Race-Condition</title>
+      <title>Chroot Jailbreaking</title>
       <link>http://localhost:1313/posts/race-condition/</link>
-      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/race-condition/</guid>
-      <description>Some of technique about Race condition</description>
+      <description>Some of technique to break out of the chroot&amp;rsquo;s jail</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/race-condition/featured.png" />
     </item>
     
