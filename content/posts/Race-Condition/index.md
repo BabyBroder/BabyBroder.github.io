@@ -1,19 +1,29 @@
 ---
-title: "Race-Condition"
+title: "Race Condition"
 date: 2025-01-03
 draft: false
-summary: "Some of technique about Race condition"
-description: "a description"
-tags: ["example", "tag"]
+summary: "Techniques for Exploiting Race Conditions"
+description: "A discussion on race conditions, their underlying causes in operating systems, and how attackers can leverage them to exploit vulnerabilities."
+tags: ["CTF", "exploitation", "operating systems", "vulnerability analysis"]
 layoutBackgroundBlur: true
 ---
 
+# Introduction
 
-An example to get you started
-# This is a heading
-## This is a subheading
-### This is a subsubheading
-#### This is a subsubsubheading
-This is a paragraph with **bold** and *italic* text.
-Check more at [Blowfish documentation](https://blowfish.page/)
-undefined
+# What is a Race Condition?
+
+# Practical Example
+
+# Exploiting Race Conditions
+
+# Threads and Concurrency Issues
+
+# Race Conditions in Operating Systems
+
+# Mitigation Techniques
+
+# Conclusion
+
+# Further Reading & References
+
+# References
