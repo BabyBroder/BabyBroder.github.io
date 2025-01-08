@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Race-Condition &middot; Doan Duc Anh</title>
-  <meta name="title" content="Race-Condition &middot; Doan Duc Anh" />
+  <title>Race Condition &middot; Doan Duc Anh</title>
+  <meta name="title" content="Race Condition &middot; Doan Duc Anh" />
   
-  <meta name="description" content="Some of technique about Race condition" />
-  <meta name="keywords" content="example, tag, " />
+  <meta name="description" content="Techniques for Exploiting Race Conditions" />
+  <meta name="keywords" content="CTF, exploitation, operating systems, vulnerability analysis, " />
   
   
   <link rel="canonical" href="http://localhost:1313/posts/race-condition/" />
@@ -69,22 +69,24 @@
   
   <meta property="og:url" content="http://localhost:1313/posts/race-condition/">
   <meta property="og:site_name" content="Doan Duc Anh">
-  <meta property="og:title" content="Race-Condition">
-  <meta property="og:description" content="a description">
+  <meta property="og:title" content="Race Condition">
+  <meta property="og:description" content="A discussion on race conditions, their underlying causes in operating systems, and how attackers can leverage them to exploit vulnerabilities.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-01-03T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-01-03T00:00:00+00:00">
-    <meta property="article:tag" content="Example">
-    <meta property="article:tag" content="Tag">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Exploitation">
+    <meta property="article:tag" content="Operating Systems">
+    <meta property="article:tag" content="Vulnerability Analysis">
     <meta property="og:image" content="http://localhost:1313/posts/race-condition/featured.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/posts/race-condition/featured.png">
-  <meta name="twitter:title" content="Race-Condition">
-  <meta name="twitter:description" content="a description">
+  <meta name="twitter:title" content="Race Condition">
+  <meta name="twitter:description" content="A discussion on race conditions, their underlying causes in operating systems, and how attackers can leverage them to exploit vulnerabilities.">
 
   
   <script type="application/ld+json">
@@ -92,10 +94,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Race-Condition",
-    "headline": "Race-Condition",
-    "description": "a description",
-    "abstract": "Some of technique about Race condition",
+    "name": "Race Condition",
+    "headline": "Race Condition",
+    "description": "A discussion on race conditions, their underlying causes in operating systems, and how attackers can leverage them to exploit vulnerabilities.",
+    "abstract": "Techniques for Exploiting Race Conditions",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/race-condition\/",
     "author" : {
@@ -108,10 +110,10 @@
     
     "dateModified": "2025-01-03T00:00:00\u002b00:00",
     
-    "keywords": ["example","tag"],
+    "keywords": ["CTF","exploitation","operating systems","vulnerability analysis"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "41"
+    "wordCount": "2722"
   }]
   </script>
 
@@ -174,11 +176,7 @@
   </div>
   
   
-  <div class="min-h-[148px]"></div>
-<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
-  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
-  <div class="relative max-w-[64rem] ml-auto mr-auto">
-    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
     
@@ -208,21 +206,21 @@
             
             
             
-  <a href="https://t.me/odanbroder"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
     <span  class="mr-1" >
         
 
   <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M0 32v448h448V32H0zm21.2 197.2H21c.1-.1.2-.3.3-.4 0 .1 0 .3-.1.4zm218 53.9V384h-31.4V281.3L128 128h37.3c52.5 98.3 49.2 101.2 59.3 125.6 12.3-27 5.8-24.4 60.6-125.6H320l-80.8 155.1z"/></svg>
   </span>
 
 
     </span>
     
-    <p class="text-base font-medium" title="">
-        Broder
+    <p class="text-base font-medium" title="Tags">
+        Tags
     </p>
 </a>
 
@@ -374,21 +372,21 @@
 
                     
   <li class="mt-1">
-    <a href="https://t.me/odanbroder"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <div  class="mr-2" >
             
 
   <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M0 32v448h448V32H0zm21.2 197.2H21c.1-.1.2-.3.3-.4 0 .1 0 .3-.1.4zm218 53.9V384h-31.4V281.3L128 128h37.3c52.5 98.3 49.2 101.2 59.3 125.6 12.3-27 5.8-24.4 60.6-125.6H320l-80.8 155.1z"/></svg>
   </span>
 
 
         </div>
         
-        <p class="text-bg font-bg" title="">
-            Broder
+        <p class="text-bg font-bg" title="Tags">
+            Tags
         </p>
     </a>
 </li>
@@ -435,16 +433,6 @@
     })();
 </script>
 
-
-  </div>
-</div>
-<script>
-  window.addEventListener('scroll', function (e) {
-    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    var background_blur = document.getElementById('menu-blur');
-    background_blur.style.opacity = (scroll / 300);
-  });
-</script>
 
   
   <div class="relative flex flex-col grow">
@@ -493,7 +481,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Race-Condition
+      Race Condition
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -538,7 +526,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-03T00:00:00&#43;00:00">3 January 2025</time><span class="px-2 text-primary-500">&middot;</span><span>41 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2025-01-03T00:00:00&#43;00:00">3 January 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2722 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
   
 
   
@@ -654,7 +642,7 @@
     
      <div
       class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
-      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
 
          <details open id="TOCView"
   class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
@@ -666,15 +654,54 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#this-is-a-subheading">This is a subheading</a>
+    <li><a href="#introduction">Introduction</a>
       <ul>
-        <li><a href="#this-is-a-subsubheading">This is a subsubheading</a>
+        <li><a href="#race-conditions-in-reality"><strong>Race Conditions in Reality</strong></a></li>
+        <li><a href="#why-should-you-care"><strong>Why Should You Care?</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#what-is-a-race-condition">What is a Race Condition?</a>
+      <ul>
+        <li><a href="#race-condition-in-logic-circuits">Race Condition in Logic Circuits</a></li>
+        <li><a href="#race-condition-in-software">Race Condition in Software</a>
           <ul>
-            <li><a href="#this-is-a-subsubsubheading">This is a subsubsubheading</a></li>
+            <li><a href="#race-conditions">Race Conditions</a></li>
+            <li><a href="#how-race-conditions-happen">How Race Conditions Happen</a></li>
+            <li><a href="#security-risks">Security Risks</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#practical-example">Practical Example</a>
+      <ul>
+        <li><a href="#producer-consumer"><em><strong>Producer-Consumer</strong></em></a>
+          <ul>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#key-changes">Key Changes</a></li>
+          </ul>
+        </li>
+        <li><a href="#bank-account"><em><strong>Bank account</strong></em></a>
+          <ul>
+            <li><a href="#problem-1">Problem</a></li>
+            <li><a href="#solution-1">Solution</a></li>
+            <li><a href="#key-changes-1">Key Changes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#race-conditions-in-operating-systems">Race Conditions in Operating Systems</a>
+      <ul>
+        <li><a href="#common-scenarios">Common Scenarios</a></li>
+        <li><a href="#real-world">Real-World</a>
+          <ul>
+            <li><a href="#notable-cves-related-to-race-conditions">Notable CVEs Related to Race Conditions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#mitigation-techniques">Mitigation Techniques</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
   </div>
@@ -688,15 +715,54 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#this-is-a-subheading">This is a subheading</a>
+    <li><a href="#introduction">Introduction</a>
       <ul>
-        <li><a href="#this-is-a-subsubheading">This is a subsubheading</a>
+        <li><a href="#race-conditions-in-reality"><strong>Race Conditions in Reality</strong></a></li>
+        <li><a href="#why-should-you-care"><strong>Why Should You Care?</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#what-is-a-race-condition">What is a Race Condition?</a>
+      <ul>
+        <li><a href="#race-condition-in-logic-circuits">Race Condition in Logic Circuits</a></li>
+        <li><a href="#race-condition-in-software">Race Condition in Software</a>
           <ul>
-            <li><a href="#this-is-a-subsubsubheading">This is a subsubsubheading</a></li>
+            <li><a href="#race-conditions">Race Conditions</a></li>
+            <li><a href="#how-race-conditions-happen">How Race Conditions Happen</a></li>
+            <li><a href="#security-risks">Security Risks</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#practical-example">Practical Example</a>
+      <ul>
+        <li><a href="#producer-consumer"><em><strong>Producer-Consumer</strong></em></a>
+          <ul>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#key-changes">Key Changes</a></li>
+          </ul>
+        </li>
+        <li><a href="#bank-account"><em><strong>Bank account</strong></em></a>
+          <ul>
+            <li><a href="#problem-1">Problem</a></li>
+            <li><a href="#solution-1">Solution</a></li>
+            <li><a href="#key-changes-1">Key Changes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#race-conditions-in-operating-systems">Race Conditions in Operating Systems</a>
+      <ul>
+        <li><a href="#common-scenarios">Common Scenarios</a></li>
+        <li><a href="#real-world">Real-World</a>
+          <ul>
+            <li><a href="#notable-cves-related-to-race-conditions">Notable CVEs Related to Race Conditions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#mitigation-techniques">Mitigation Techniques</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
   </div>
@@ -780,59 +846,614 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>An example to get you started</p>
+          
 
-
-<h1 class="relative group">This is a heading 
-    <div id="this-is-a-heading" class="anchor"></div>
+<h2 class="relative group">Introduction 
+    <div id="introduction" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#this-is-a-heading" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#introduction" aria-label="Anchor">#</a>
     </span>        
     
-</h1>
+</h2>
+<p>Race conditions are a common yet critical issue in both <strong>digital systems</strong> and <strong>cybersecurity</strong>, where improper handling of simultaneous operations can cause unpredictable behavior. Whether in <strong>logic circuits</strong> or <strong>software applications</strong>, race conditions can lead to unexpected glitches, security vulnerabilities, and even full system compromises.</p>
 
 
-<h2 class="relative group">This is a subheading 
-    <div id="this-is-a-subheading" class="anchor"></div>
+<h3 class="relative group"><strong>Race Conditions in Reality</strong> 
+    <div id="race-conditions-in-reality" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#this-is-a-subheading" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#race-conditions-in-reality" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Imagine two people trying to withdraw money from the same bank account at the exact same time. If the system doesn&rsquo;t handle both requests properly, it might allow them to overdraw the account — resulting in unexpected or incorrect behavior. This scenario perfectly illustrates the essence of a <strong>race condition</strong>: when the outcome depends on the timing of events.</p>
+<p>In the world of cybersecurity, race conditions have been at the heart of some of the most infamous vulnerabilities, such as the <a href="https://dirtycow.ninja/" target="_blank"><strong>Dirty COW exploit (CVE-2016-5195)</strong></a>. These types of bugs allow attackers to manipulate a system by taking advantage of timing issues in how resources are accessed.</p>
+
+
+<h3 class="relative group"><strong>Why Should You Care?</strong> 
+    <div id="why-should-you-care" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#why-should-you-care" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Race conditions aren&rsquo;t just an abstract concept in digital circuits or operating systems — they are a real-world problem that attackers can exploit to:</p>
+<ul>
+<li><strong>Bypass security controls</strong></li>
+<li><strong>Gain unauthorized access</strong></li>
+<li><strong>Corrupt or modify data</strong></li>
+</ul>
+<p>Understanding how race conditions occur, both in hardware and software, is essential for anyone working in <strong>system design</strong>, <strong>security analysis</strong>, or <strong>exploit development</strong>.</p>
+
+
+<h2 class="relative group">What is a Race Condition? 
+    <div id="what-is-a-race-condition" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#what-is-a-race-condition" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>A race condition happens when two or more entities simultaneously access, modify, or interact with a shared resource. The outcome depends on the order and timing of these interactions. Because the entities operate independently, their actions can overlap, leading to unexpected results or conflicts. This unpredictability can disrupt processes that rely on consistent or coordinated use of the shared resource.</p>
+
+
+<h3 class="relative group">Race Condition in Logic Circuits 
+    <div id="race-condition-in-logic-circuits" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#race-condition-in-logic-circuits" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>The race condition was first observed in logic circuits, where differences in propagation delays between circuit components can cause unintended glitches or incorrect outputs.</p>
+<p>A <strong>race condition</strong> in a logic circuit occurs when the output depends on the timing of input signal changes, leading to unintended behavior or glitches. This happens due to differences in <strong>propagation delays</strong> of the logic gates involved.</p>
+<p align="center">
+  <img src="img/Introduction/Race_condition_circuit_logic.png" />
+<p><em>The term race condition was already in use by 1954, for example in David A. Huffman&rsquo;s doctoral thesis &ldquo;The synthesis of sequential switching circuits&rdquo;.</em></p>
+</p>
+<ul>
+<li>The circuit has one input signal: <strong>A</strong>.</li>
+<li>It consists of:
+<ul>
+<li>A <strong>NOT gate</strong> with a propagation delay of <strong>Δt₁</strong>.</li>
+<li>An <strong>AND gate</strong> with a propagation delay of <strong>Δt₂</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Propagation delay refers to the time it takes for a signal to travel through a logic gate from input to output.</p>
+<ul>
+<li>
+<p><strong>NOT gate delay (Δt₁)</strong>:<br>
+When the input <strong>A</strong> is fed into the NOT gate, it takes <strong>Δt₁</strong> units of time for the NOT gate to produce the correct output.</p>
+</li>
+<li>
+<p><strong>AND gate delay (Δt₂)</strong>:<br>
+When the input signals arrive at the AND gate, it takes <strong>Δt₂</strong> units of time for the gate to produce the correct output.</p>
+</li>
+</ul>
+<p>Let&rsquo;s assume the input <strong>A</strong> changes from <strong>low (0)</strong> to <strong>high (1)</strong>. The race condition occurs due to the following timing differences:</p>
+<ul>
+<li>The NOT gate inverts the input A with a propagation delay of Δt₁. The AND gate then combines the original input A with the inverted value A&rsquo; from the NOT gate. However, due to the delay in the NOT gate, A&rsquo; reaches the AND gate later than A, creating a timing mismatch. The AND gate also introduces its own delay of Δt₂, further contributing to the glitch that causes the race condition.</li>
+</ul>
+<p>When the input <strong>A</strong> changes from 0 to 1:</p>
+<ol>
+<li>The AND gate receives the original input <strong>A</strong> immediately.</li>
+<li>The NOT gate takes <strong>Δt₁</strong> time to update its output.</li>
+<li>The AND gate will output a <strong>short spike</strong> because it initially receives the old value from the NOT gate before the NOT gate&rsquo;s output stabilizes.</li>
+</ol>
+<p>The duration of this spike is:</p>
+<pre tabindex="0"><code>(Δt₁ + Δt₂) - Δt₂ = Δt₁
+</code></pre><p><strong>Note</strong></p>
+<ul>
+<li>The sum of Δt₁ and Δt₂ represents the critical path — the longest path that a signal must travel through the circuit, determining the circuit&rsquo;s overall delay.</li>
+</ul>
+
+
+<h3 class="relative group">Race Condition in Software 
+    <div id="race-condition-in-software" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#race-condition-in-software" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>When I research Race Conditon, I wonder why race conditions in software are often detected later than hardware race conditions, even though both deal with concurrency issues.</p>
+<p>There are a few primary keys involved</p>
+<p><strong>Timing Sensitivity: Hardware Requires Precise Timing Detection</strong>.</p>
+<ul>
+<li>In hardware, timing is critical because circuits rely on exact timing of signals to function correctly. Even a tiny delay in signal propagation can cause a critical failure, such as setup/hold time violations or metastability in flip-flops.
+<ul>
+<li>Since hardware is physically built and operates in real-time, race conditions must be detected early during the circuit design phase.</li>
+<li>If a race condition in hardware goes undetected, it can cause permanent physical failures in chips, making the hardware unusable</li>
+</ul>
+</li>
+</ul>
+<p>→ Hardware race condition detection happens early because it&rsquo;s mission-critical to ensure circuits work reliably before they are manufactured.</p>
+<p><strong>Software Race Conditions Depend on Runtime Behavior</strong>.</p>
+<ul>
+<li>In contrast, software race conditions are logical bugs that emerge based on runtime behavior, meaning they depend on how the program runs in a particular environment.
+<ul>
+<li><strong>Concurrency isn&rsquo;t always deterministic:</strong> Software race conditions depend on the operating system&rsquo;s thread scheduling and hardware execution timing, which vary across different runs.</li>
+<li><strong>They don&rsquo;t always manifest:</strong> Some race conditions might only occur under specific conditions (e.g., heavy system load or specific input sequences), making them hard to detect during development.</li>
+<li><strong>Testing tools aren&rsquo;t perfect:</strong> Detecting software race conditions requires tools like ThreadSanitizer, Valgrind, or dynamic analysis tools, but these tools can slow down the program significantly, making it impractical to use them all the time.</li>
+</ul>
+</li>
+</ul>
+<p>→ Software race conditions may only be discovered later during testing or even after deployment, when they manifest in real-world use cases.</p>
+
+
+<h4 class="relative group">Race Conditions 
+    <div id="race-conditions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#race-conditions" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>A <strong>race condition</strong> occurs in software when multiple code paths are executed concurrently, and the outcome depends on the timing of these operations. If the execution times of these paths vary unexpectedly, they may complete in an unintended order, leading to <strong>unanticipated behavior</strong> and <strong>software bugs</strong>. In some cases, race conditions can also arise between two or more separate programs, potentially resulting in <strong>security vulnerabilities</strong>.</p>
+
+
+<h4 class="relative group">How Race Conditions Happen 
+    <div id="how-race-conditions-happen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#how-race-conditions-happen" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Race conditions typically occur in scenarios involving <strong>concurrent processes</strong> or <strong>multithreading</strong>. For example, when two threads attempt to access shared resources (such as files, memory, or hardware) simultaneously, without proper synchronization mechanisms, one thread might override or conflict with the other. This can lead to inconsistent data, crashes, or even security breaches.</p>
+
+
+<h4 class="relative group">Security Risks 
+    <div id="security-risks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#security-risks" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Race conditions pose significant <strong>security risks</strong>, as attackers can exploit these timing issues to manipulate a program&rsquo;s execution. Some common attack vectors include:</p>
+<ul>
+<li><strong>Privilege Escalation</strong>: Exploiting timing vulnerabilities to gain unauthorized access or escalate user privileges.</li>
+<li><strong>Data Corruption</strong>: Modifying or deleting critical data by manipulating the execution order of operations.</li>
+<li><strong>Denial of Service (DoS)</strong>: Triggering unexpected behaviors that cause the system to crash or hang, disrupting normal operation.</li>
+</ul>
+
+
+<h2 class="relative group">Practical Example 
+    <div id="practical-example" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#practical-example" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 
 
-<h3 class="relative group">This is a subsubheading 
-    <div id="this-is-a-subsubheading" class="anchor"></div>
+<h3 class="relative group"><em><strong>Producer-Consumer</strong></em> 
+    <div id="producer-consumer" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#this-is-a-subsubheading" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#producer-consumer" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
 
 
-<h4 class="relative group">This is a subsubsubheading 
-    <div id="this-is-a-subsubsubheading" class="anchor"></div>
+<h4 class="relative group">Problem 
+    <div id="problem" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#this-is-a-subsubsubheading" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#problem" aria-label="Anchor">#</a>
     </span>        
     
 </h4>
-<p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.
-Check more at <a href="https://blowfish.page/" target="_blank">Blowfish documentation</a>
-undefined</p>
+<p>This <a href="code/example_race.c">code</a> demonstrates a <strong>race condition</strong> between two threads: a producer and a consumer. Both threads share a common resource, <code>products</code>, which is a variable that tracks the total number of produced and consumed products. The producer thread increments the <code>products</code> variable, and the consumer thread decrements it. Without proper synchronization, this code exhibits undefined behavior, leading to potential issues such as negative values for <code>products</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">products</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">producer</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">products</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">products</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;+------------------+</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|Produced a product|</span><span class="se">\t</span><span class="s">Total products: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">products</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">consumer</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">products</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">products</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;+------------------+</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|Consumed a product|</span><span class="se">\t</span><span class="s">Total products: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">products</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The main issue lies in the concurrent access to the shared resource <code>products</code> by both threads. Since the increment (<code>products++</code>) and decrement (<code>products--</code>) operations are not atomic, the threads can interfere with each other, causing incorrect results.</p>
+<p>For example:</p>
+<ol>
+<li>The producer thread reads the value of <code>products</code>.</li>
+<li>The consumer thread also reads the value of <code>products</code> (which has not been updated by the producer yet).</li>
+<li>Both threads perform their operations (increment and decrement), leading to an incorrect final value of <code>products</code>, which can become a false update.</li>
+</ol>
+<p>In this code, I visualize the process of producing and consuming a product, where <code>products</code> is the shared variable of both threads. When I run this code, the value of <code>products</code> might be a false update.</p>
+<p align="center">
+  <img src="img/Example/output_pro_con.png" />
+  One output sample
+</p>
 
+
+<h4 class="relative group">Solution 
+    <div id="solution" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#solution" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>To fix the race condition, we use <strong>mutexes</strong> to synchronize access to the shared resource. This ensures that only one thread at a time can access and modify the <code>products</code> variable, making the program&rsquo;s behavior predictable and correct.</p>
+
+
+<h4 class="relative group">Key Changes 
+    <div id="key-changes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#key-changes" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<ol>
+<li><strong>Mutex Locking</strong>: We use <code>pthread_mutex_lock</code> before accessing <code>products</code> to ensure mutual exclusion, preventing both threads from modifying the variable simultaneously.</li>
+<li><strong>Mutex Unlocking</strong>: After a thread has finished modifying the variable, it releases the lock with <code>pthread_mutex_unlock</code>, allowing the other thread to access the shared resource.</li>
+</ol>
+<p><a href="code/example_race_fix.c">code</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">producer</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">products</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">products</span><span class="o">++</span><span class="p">;</span>                
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;+------------------+</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|Produced a product|</span><span class="se">\t</span><span class="s">Total products: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">products</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">consumer</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">products</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">products</span><span class="o">--</span><span class="p">;</span>                 
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;+------------------+</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|Consumed a product|</span><span class="se">\t</span><span class="s">Total products: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">products</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group"><em><strong>Bank account</strong></em> 
+    <div id="bank-account" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#bank-account" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><em><strong>Note</strong></em></p>
+<p>In a multi-threaded program, the operating system&rsquo;s scheduler decides when to switch between threads (called a context switch). However, context switches don&rsquo;t always happen exactly where we want during testing, making it hard to reproduce race conditions.</p>
+<p>By inserting a small delay using <code>usleep(1)</code>. This increase the likelihood that the operating system will perform a context switch at that point and Force both threads to access shared resources at overlapping times, increasing the chances of a race condition.</p>
+
+
+<h4 class="relative group">Problem 
+    <div id="problem-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#problem-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Without the delay, the program might run so fast that both operations complete before a context switch happens, making the race condition harder to observe.</p>
+<p>In this <a href="code/example_race_bankaccount.c">code</a>, two threads perform deposit and withdrawal operations on a shared bank account balance. Due to the lack of proper synchronization, a race condition occurs, causing incorrect balance updates.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>  
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">depositAmount</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">withdrawAmount</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span><span class="o">*</span> <span class="nf">deposit</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">arg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">balance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">usleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">balance</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">+</span> <span class="n">amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Deposit: +%d, New Balance: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">balance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span><span class="o">*</span> <span class="nf">withdraw</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">arg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">balance</span> <span class="o">&gt;=</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">balance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">usleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">balance</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="n">amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Withdraw: -%d, New Balance: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">balance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Withdraw: -%d, Insufficient funds! Current Balance: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">balance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The race condition occurs because two threads simultaneously access and update a shared bank account balance without synchronization. In this example, the deposit thread reads the balance as 1000 and calculates a new balance of 1500 after adding 500. Meanwhile, the withdrawal thread also reads the balance as 1000 and calculates a new balance of 700 after subtracting 300. Since both threads perform their operations based on the initial balance of 1000, the withdrawal thread overwrites the deposit result. This leads to an incorrect final balance of 700 instead of the expected 1200, demonstrating how concurrent access to shared data can cause inconsistent results.</p>
+<p>The root cause of the issue is that both threads read outdated values of the shared balance variable before any updates occur. As a result, each thread performs calculations using incorrect data and then writes its result, overwriting the other thread&rsquo;s update.</p>
+<p>For example:</p>
+<ol>
+<li>The deposit thread reads the balance as <code>1000</code>.</li>
+<li>The withdrawal thread also reads the balance as <code>1000</code>, before the deposit thread has updated it.</li>
+<li>The deposit thread calculates the new balance as <code>1500</code> (by adding <code>500</code>) and updates the balance.</li>
+<li>The withdrawal thread calculates the new balance as <code>700</code> (by subtracting <code>300</code>) and overwrites the deposit thread’s result.</li>
+</ol>
+<p>In this code, the shared variable <code>balance</code> is accessed and modified by both threads without synchronization, causing a race condition. When I run this code, the final balance may be incorrect due to simultaneous operations, as the withdrawal thread can overwrite the deposit thread’s update.</p>
+<p align="center">
+  <img src="img/Example/bank_account.png" />
+  One output sample
+</p>
+
+
+<h4 class="relative group">Solution 
+    <div id="solution-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#solution-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>To fix the race condition in the bank account example, we use <strong>mutexes</strong> to synchronize access to the shared <code>balance</code> variable. This ensures that only one thread at a time can read or update the balance, preventing inconsistent results caused by simultaneous operations. By locking the critical section where the balance is accessed, the program&rsquo;s behavior becomes predictable and correct.</p>
+
+
+<h4 class="relative group">Key Changes 
+    <div id="key-changes-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#key-changes-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<ol>
+<li><strong>Mutex Locking</strong>: We use <code>pthread_mutex_lock</code> before reading or modifying the <code>balance</code> variable to ensure mutual exclusion, preventing both the deposit and withdrawal threads from accessing the variable at the same time.</li>
+<li><strong>Mutex Unlocking</strong>: After a thread completes its operation on the <code>balance</code> variable, it releases the lock using <code>pthread_mutex_unlock</code>, allowing the other thread to safely access the shared resource.</li>
+<li><strong>Critical Section</strong>: The balance update logic is enclosed within the locked section to ensure that all read-modify-write operations are atomic and cannot be interrupted by another thread.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">pthread_mutex_t</span> <span class="n">lock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">depositAmount</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">withdrawAmount</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">deposit</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">arg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">balance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">usleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">balance</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">+</span> <span class="n">amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Deposit: +%d, New Balance: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">balance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">arg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">balance</span> <span class="o">&gt;=</span> <span class="n">amount</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">balance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">usleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">balance</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="n">amount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Withdraw: -%d, New Balance: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">balance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Withdraw: -%d, Insufficient funds! Current Balance: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">balance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><a href="code/example_race_bankaccount_fix.c">code</a></p>
+
+
+<h2 class="relative group">Race Conditions in Operating Systems 
+    <div id="race-conditions-in-operating-systems" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#race-conditions-in-operating-systems" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Race conditions in operating systems occur when multiple processes or threads compete to access shared resources without proper synchronization. These issues can lead to unexpected behaviors, system crashes, data corruption, and security vulnerabilities. Understanding race conditions is critical for operating system developers, cybersecurity professionals, and CTF participants who explore kernel-level challenges.</p>
+
+
+<h3 class="relative group">Common Scenarios 
+    <div id="common-scenarios" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#common-scenarios" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>File Access</strong>: Multiple processes accessing the same file simultaneously.</li>
+<li><strong>Resource Allocation</strong>: Competing processes attempting to acquire system resources (e.g., memory, I/O devices).</li>
+<li><strong>Inter-process Communication (IPC)</strong>: Race conditions in pipes, message queues, or shared memory.</li>
+</ul>
+
+
+<h3 class="relative group">Real-World 
+    <div id="real-world" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#real-world" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Race conditions can have severe consequences, affecting system stability, security, and functionality. Here are some notable real-world examples:</p>
+<ol>
+<li><strong>Data Corruption</strong>: A race condition in a database system could corrupt critical data, leading to incorrect application behavior.</li>
+<li><strong>System Crashes</strong>: Operating systems can crash if kernel-level race conditions corrupt essential structures.</li>
+<li><strong>Security Breaches</strong>: Attackers can exploit race conditions to escalate privileges, bypass security checks, or inject malicious code.</li>
+</ol>
+
+
+<h4 class="relative group">Notable CVEs Related to Race Conditions 
+    <div id="notable-cves-related-to-race-conditions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#notable-cves-related-to-race-conditions" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Race conditions are a common source of vulnerabilities in operating systems. Here are some notable CVEs:</p>
+<ol>
+<li>
+<p><strong>CVE-2016-5195 (Dirty COW)</strong></p>
+<ul>
+<li><strong>Description</strong>: A race condition in the Linux kernel&rsquo;s memory subsystem allowed attackers to gain write access to read-only files, leading to privilege escalation.</li>
+<li><strong>Impact</strong>: This vulnerability was widely exploited, affecting millions of Linux systems.</li>
+<li><strong>Fix</strong>: The issue was patched by implementing proper synchronization in the kernel&rsquo;s memory management.</li>
+</ul>
+</li>
+<li>
+<p><strong>CVE-2021-3493</strong></p>
+<ul>
+<li><strong>Description</strong>: A race condition in the overlay filesystem in the Linux kernel allowed attackers to gain root privileges.</li>
+<li><strong>Impact</strong>: Exploited in the wild to gain unauthorized access.</li>
+<li><strong>Fix</strong>: The patch involved fixing the synchronization issue in the filesystem.</li>
+</ul>
+</li>
+<li>
+<p><strong>CVE-2014-4014</strong></p>
+<ul>
+<li><strong>Description</strong>: A race condition in the handling of user credentials in FreeBSD allowed attackers to hijack sessions.</li>
+<li><strong>Impact</strong>: This vulnerability compromised the confidentiality and integrity of user sessions.</li>
+<li><strong>Fix</strong>: Proper locking mechanisms were introduced to address the race condition.</li>
+</ul>
+</li>
+</ol>
+<p>&hellip;</p>
+<p><em>Race conditions often appear in <strong>Capture the Flag (CTF)</strong> challenges, particularly in the <strong>pwnable</strong> category, where participants exploit kernel vulnerabilities to achieve privilege escalation.</em></p>
+<!-- ## Tools for Detecting Race Conditions
+Several tools can help identify and analyze race conditions in operating systems:
+
+1. **ThreadSanitizer**: Detects race conditions at runtime.
+2. **Valgrind**: A powerful tool for memory debugging and detecting concurrency issues.
+3. **Syzkaller**: A kernel fuzzer that can uncover race conditions and other vulnerabilities in the Linux kernel. -->
+
+
+<h2 class="relative group">Mitigation Techniques 
+    <div id="mitigation-techniques" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#mitigation-techniques" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>
+<p><strong>Use Proper Synchronization Primitives</strong>:</p>
+<ul>
+<li>Mutexes</li>
+<li>Semaphores</li>
+<li>Spinlocks</li>
+</ul>
+</li>
+<li>
+<p><strong>Minimize Critical Sections</strong>:</p>
+<ul>
+<li>Reduce the amount of code executed within critical sections to minimize contention.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Atomic Operations</strong>:</p>
+<ul>
+<li>Use atomic operations for shared resource access to ensure data consistency.</li>
+</ul>
+</li>
+</ol>
+
+
+<h2 class="relative group">Conclusion 
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Race conditions are a critical issue in multi-threaded and multi-process systems, where the timing or order of operations can lead to unpredictable results or security vulnerabilities. Preventing race conditions requires careful design and the use of appropriate synchronization techniques. Proper synchronization is crucial to maintaining data integrity and ensuring that multi-threaded or multi-process programs function as expected.</p>
+<p>For further learning, it’s essential to study concurrency and synchronization mechanisms specific to your programming environment and continue exploring best practices to avoid race conditions in complex systems.</p>
+<!-- 
+## Further Reading & References
+
+[Race Condition - Wiki](https://en.wikipedia.org/wiki/Race_condition) 
+
+[Race Condition - Lance Harvie - firmware](https://medium.com/@lanceharvieruntime/are-race-conditions-ruining-your-firmware-design-heres-how-to-fix-it-4d6d7b547ca)
+-->
           
           
           
@@ -849,7 +1470,7 @@ undefined</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/posts/race-condition/&amp;text=Race-Condition"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/posts/race-condition/&amp;text=Race%20Condition"
       title="Tweet on Twitter"
       aria-label="Tweet on Twitter"
       >
@@ -867,7 +1488,7 @@ undefined</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=http://localhost:1313/posts/race-condition/&amp;resubmit=true&amp;title=Race-Condition"
+      href="https://t.me/share/url?url=http://localhost:1313/posts/race-condition/&amp;resubmit=true&amp;title=Race%20Condition"
       title="Share via Telegram"
       aria-label="Share via Telegram"
       >
@@ -933,10 +1554,10 @@ undefined</p>
       <ul class="flex flex-col list-none sm:flex-row">
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="https://github.com/BabyBroder"
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="https://www.linkedin.com/in/duc-anh-doan-67abb0333/"
             title="">
             
-            Broder
+            Linkedln
           </a>
         </li>
         

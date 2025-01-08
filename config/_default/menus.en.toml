@@ -1,18 +1,31 @@
 [[main]]
 none = "none"
 
+# [[main]]
+# name = "Broder"
+# pre = "telegram"
+# url = "https://t.me/odanbroder"
+# identifier = "xjbHd89Rrz"
+# weight = 1
+
 [[main]]
-name = "Broder"
-pre = "telegram"
-url = "https://t.me/odanbroder"
-identifier = "xjbHd89Rrz"
-weight = 1
+name = "Tags"
+pre = "hackernews"
+pageRef = "tags"
+identifier = "GwwselvCn3"
+weight = 9999
 
 [[footer]]
 none = "none"
 
+# [[footer]]
+# name = "Broder"
+# url = "https://github.com/BabyBroder"
+# identifier = "DnxHxrR2Ba"
+# weight = 9999
+
 [[footer]]
-name = "Broder"
-url = "https://github.com/BabyBroder"
-identifier = "DnxHxrR2Ba"
+name = "Linkedln"
+url = "https://www.linkedin.com/in/duc-anh-doan-67abb0333/"
+identifier = "pCuGBkJdN0"
 weight = 9999
