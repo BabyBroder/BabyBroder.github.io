@@ -49,5 +49,25 @@
       
     </item>
     
+    <item>
+      <title>Pwn</title>
+      <link>http://localhost:1313/tags/pwn/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/pwn/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Write-Up</title>
+      <link>http://localhost:1313/tags/write-up/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/write-up/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>
