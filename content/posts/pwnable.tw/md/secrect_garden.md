@@ -229,4 +229,4 @@ if ( index <= 0x63 && (v1 = (_DWORD *)garden[index]) != 0LL )
 
 ### Payload
 
-[solve.py](../code/secrect_garden/solve.py)
+[solve.py](https://github.com/BabyBroder/CTF/blob/pwnableTW/secrect_garden/solve.py)
