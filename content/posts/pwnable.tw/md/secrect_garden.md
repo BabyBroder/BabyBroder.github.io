@@ -71,9 +71,9 @@ Add:
 
 ```cpp=
 struct Flower{
-    int used;                #set when raise successfully
-    char *name_flower;       #input the size and input the name
-    char color_flower[24];   #nothing special, except for the input 
+    int used;                // set when raise successfully
+    char *name_flower;       // input the size and input the name
+    char color_flower[24];   // nothing special, except for the input 
 }
 ```
 
