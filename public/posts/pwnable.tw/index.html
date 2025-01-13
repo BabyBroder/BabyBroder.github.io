@@ -113,7 +113,7 @@
     "keywords": ["CTF","exploitation","pwn","write-up"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1019"
+    "wordCount": "1975"
   }]
   </script>
 
@@ -526,7 +526,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-01T00:00:00&#43;00:00">1 January 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1019 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+  <time datetime="2025-01-01T00:00:00&#43;00:00">1 January 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1975 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
   
 
   
@@ -667,6 +667,26 @@
         <li><a href="#payload">Payload</a></li>
       </ul>
     </li>
+    <li><a href="#secrect-garden">Secrect Garden</a>
+      <ul>
+        <li><a href="#lets-check-1">Let&rsquo;s check</a>
+          <ul>
+            <li><a href="#raise">raise</a></li>
+            <li><a href="#visit">visit</a></li>
+            <li><a href="#remove">remove</a></li>
+            <li><a href="#clean">clean</a></li>
+            <li><a href="#exit">exit</a></li>
+          </ul>
+        </li>
+        <li><a href="#exploitation-1">Exploitation</a>
+          <ul>
+            <li><a href="#leak-libc">Leak libc</a></li>
+            <li><a href="#the-result">The result</a></li>
+          </ul>
+        </li>
+        <li><a href="#payload-1">Payload</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -691,6 +711,26 @@
           </ul>
         </li>
         <li><a href="#payload">Payload</a></li>
+      </ul>
+    </li>
+    <li><a href="#secrect-garden">Secrect Garden</a>
+      <ul>
+        <li><a href="#lets-check-1">Let&rsquo;s check</a>
+          <ul>
+            <li><a href="#raise">raise</a></li>
+            <li><a href="#visit">visit</a></li>
+            <li><a href="#remove">remove</a></li>
+            <li><a href="#clean">clean</a></li>
+            <li><a href="#exit">exit</a></li>
+          </ul>
+        </li>
+        <li><a href="#exploitation-1">Exploitation</a>
+          <ul>
+            <li><a href="#leak-libc">Leak libc</a></li>
+            <li><a href="#the-result">The result</a></li>
+          </ul>
+        </li>
+        <li><a href="#payload-1">Payload</a></li>
       </ul>
     </li>
   </ul>
@@ -851,7 +891,7 @@
 <ul>
 <li>Check if the expression valid.</li>
 </ul>
-<p>There are nothing important in the above section, I will check detail in parse_expr.</p>
+<p>There is nothing important in the above section; I will check the details in parse_expr.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="kr">__cdecl</span> <span class="nf">parse_expr</span><span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">,</span> <span class="n">_DWORD</span> <span class="o">*</span><span class="n">arr</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// eax
@@ -931,9 +971,9 @@
 </span></span><span class="line"><span class="cl">    <span class="nf">eval</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">expression</span><span class="p">[</span><span class="n">v6</span><span class="o">--</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>I comment detail in some important code, so I just summarize the main note.</p>
+</span></span></code></pre></div><p>I comment in detail in some important code, so I just summarize the main note.</p>
 <ol>
-<li>This function check each char in input until this char in [+, -, *, /, %] or null byte. Why NULL byte??</li>
+<li>This function checks each char in input until this char is in [+, -, *, /, %] or a null byte. Why NULL byte?? </li>
 </ol>
 <p>The reason for this is that <code>- (unsigned int)'0'</code>
 
@@ -953,14 +993,14 @@
     </figure>
 </p>
 <ol start="2">
-<li>If match, it calls malloc and atoi to convert to number. Especially, this save the number of num to <code>*arr</code> and each num after this <code>arr</code>, while arr is v1[101] in calc function.</li>
+<li>If matched, it calls malloc and atoi to convert to a number. Especially, this saves the number of num to *arr and each num after this,arr while arr is v1[101] in the calc function.</li>
 </ol>
 <ul>
-<li>I imagine that v1[0] save the number of num, and v1[1], v1[2],&hellip;. save each number after.</li>
+<li>I imagine that v1[0] saves the number of num, and v1[1], v1[2],&hellip;. save each number after.</li>
 </ul>
 <ol start="3">
 <li>
-<p>In the first expression, this function doesn&rsquo;t call anything, just save the first size to expression[].</p>
+<p>In the first expression, this function doesn&rsquo;t call anything; it just saves the first size to expression[].</p>
 </li>
 <li>
 <p>The next work is the same as the above-mentioned steps, but now this will calculate</p>
@@ -1015,7 +1055,7 @@
 →2+3
 →5+4*5
 →5+20+6</p>
-<p>Once done this section, it will calculate from the right to left of expression, this would be right because the sign in the later expression only in [+, -] or the sign with higher role in the right most.</p>
+<p>Once done, this section will calculate from the right to the left of the expression; this would be right because the sign in the later expression is only in [+, -] or the sign with the higher role in the rightmost</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span> <span class="n">v6</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">eval</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">expression</span><span class="p">[</span><span class="n">v6</span><span class="o">--</span><span class="p">]);</span>
 </span></span></code></pre></div>
@@ -1030,13 +1070,19 @@
     </span>        
     
 </h3>
-<p>Hmmm, do I miss something?</p>
+<p>Hmm, do I miss something?</p>
 <ul>
-<li>I just think that why this only handle(check in loop) with sign instead of both sign and number.</li>
-<li>It get two number in v1 to calculate, is it possible to input only one number and trigger something?</li>
-<li>This use v1[0] as a count and take it as the index to calculate while num just are in the next locatation, is it secure?</li>
+<li>
+<p>I just think that this should only handle (check in loop) with sign instead of both sign and number.</p>
+</li>
+<li>
+<p>If it gets two numbers in v1 to calculate, is it possible to input only one number and trigger something?</p>
+</li>
+<li>
+<p>Is this use of v1[0] as a count and taking it as the index to calculate while num is just in the next location secure?</p>
+</li>
 </ul>
-<p>If I don&rsquo;t input any number before sign in the first expression.</p>
+<p>If I don&rsquo;t input any number before signing in the first expression.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="n">sign</span> <span class="o">==</span> <span class="sc">&#39;+&#39;</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">a1</span><span class="p">[</span><span class="o">*</span><span class="n">a1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a1</span><span class="p">[</span><span class="o">*</span><span class="n">a1</span><span class="p">];</span>
@@ -1131,7 +1177,7 @@
     </span>        
     
 </h4>
-<p>The other sign have the same logic bug, so I just use it to leak, write the payload and execute this.</p>
+<p>The other sign has the same logic bug, so I just use it to leak, write the payload, and execute this.</p>
 
 
 <h3 class="relative group">Payload 
@@ -1145,6 +1191,422 @@
     
 </h3>
 <p><a href="https://github.com/BabyBroder/CTF/blob/pwnableTW/calc/solve.py" target="_blank"><em><strong>solve.py</strong></em></a></p>
+
+
+<h2 class="relative group">Secrect Garden 
+    <div id="secrect-garden" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#secrect-garden" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Let&rsquo;s check 
+    <div id="lets-check-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#lets-check-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/pwnable.tw/img/secrectgarden/main_hu9076838782060450771.png 330w,
+        /posts/pwnable.tw/img/secrectgarden/main_hu1387300045482200201.png 660w,
+        /posts/pwnable.tw/img/secrectgarden/main_hu3447185031892684566.png 1024w,
+        /posts/pwnable.tw/img/secrectgarden/main_hu99047251664345608.png 2x"
+        src="/posts/pwnable.tw/img/secrectgarden/main_hu1387300045482200201.png"
+        alt="images"
+      />
+      
+    </figure>
+</p>
+
+
+<h4 class="relative group">raise 
+    <div id="raise" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#raise" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">raise</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">_QWORD</span> <span class="o">*</span><span class="n">v0</span><span class="p">;</span> <span class="c1">// rbx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">void</span> <span class="o">*</span><span class="n">v1</span><span class="p">;</span> <span class="c1">// rbp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">_QWORD</span> <span class="o">*</span><span class="n">v2</span><span class="p">;</span> <span class="c1">// rcx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// edx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">_DWORD</span> <span class="n">size</span><span class="p">[</span><span class="mi">9</span><span class="p">];</span> <span class="c1">// [rsp+4h] [rbp-24h] BYREF
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="o">*</span><span class="p">(</span><span class="n">_QWORD</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nf">__readfsqword</span><span class="p">(</span><span class="mh">0x28u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span> <span class="n">count_flower</span> <span class="o">&gt;</span> <span class="mh">0x63u</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;The garden is overflow&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">v0</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="mh">0x28uLL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">*</span><span class="n">v0</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">v0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>                                  <span class="c1">// name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">v0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>                                  <span class="c1">// color
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">v0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">v0</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">__printf_chk</span><span class="p">(</span><span class="mi">1LL</span><span class="p">,</span> <span class="s">&#34;Length of the name :&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="nf">__isoc99_scanf</span><span class="p">(</span><span class="s">&#34;%u&#34;</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">v1</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">v1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Alloca error !!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">__printf_chk</span><span class="p">(</span><span class="mi">1LL</span><span class="p">,</span> <span class="s">&#34;The name of flower :&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">read</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">v0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">__printf_chk</span><span class="p">(</span><span class="mi">1LL</span><span class="p">,</span> <span class="s">&#34;The color of the flower :&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">__isoc99_scanf</span><span class="p">(</span><span class="s">&#34;%23s&#34;</span><span class="p">,</span> <span class="n">v0</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">v0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>                            <span class="c1">// mark it grow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span> <span class="n">garden</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">garden</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span> <span class="o">*</span><span class="n">v2</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="o">++</span><span class="n">v3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">++</span><span class="n">v2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span> <span class="n">v3</span> <span class="o">==</span> <span class="mi">100</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">goto</span> <span class="n">Add</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">garden</span><span class="p">[</span><span class="n">v3</span><span class="p">]</span> <span class="o">=</span> <span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Add</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">++</span><span class="n">count_flower</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Successful !&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>raise() use malloc to <strong>allocate for v0 with the size of 0x28</strong>, make sure all element in v0 is zero.</li>
+<li>Then, malloc to allocate for v1 with the size which I input, I will enter the name of flower with the respectively size. -&gt; <strong>v0[1] = v1</strong> -&gt; <strong>v0[1] is the pointer to v1.</strong></li>
+<li>Afterwards, raise() requires to input the color of the flower with the size: 23(make sure &lt; 3 bytes), and store in v0[2], and -&gt;<code>*(_DWORD *)v0 = 1</code>;</li>
+<li>Finally, it <strong>stores v0 to garden</strong> <strong>make sure the size of garden &lt;= 100</strong></li>
+</ul>
+<p><strong>I think about the struct like this</strong></p>
+<pre tabindex="0"><code class="language-cpp=" data-lang="cpp=">struct Flower{
+    int used;                #set when raise successfully
+    char *name_flower;       #input the size and input the name
+    char color_flower[24];   #nothing special, except for the input 
+}
+</code></pre><p><em><strong>Then, the program will store a pointer to this struct in garden.</strong></em></p>
+
+
+<h4 class="relative group">visit 
+    <div id="visit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#visit" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">visit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">__int64</span> <span class="n">v0</span><span class="p">;</span> <span class="c1">// rbx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">__int64</span> <span class="n">v1</span><span class="p">;</span> <span class="c1">// rax
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="n">v0</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span> <span class="n">count_flower</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">v1</span> <span class="o">=</span> <span class="n">garden</span><span class="p">[</span><span class="n">v0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span> <span class="n">v1</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">v1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">__printf_chk</span><span class="p">(</span><span class="mi">1LL</span><span class="p">,</span> <span class="s">&#34;Name of the flower[%u] :%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="p">)(</span><span class="n">v1</span> <span class="o">+</span> <span class="mi">8</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">LODWORD</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">=</span> <span class="nf">__printf_chk</span><span class="p">(</span><span class="mi">1LL</span><span class="p">,</span> <span class="s">&#34;Color of the flower[%u] :%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)(</span><span class="n">garden</span><span class="p">[</span><span class="n">v0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">16LL</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">++</span><span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span> <span class="n">v0</span> <span class="o">!=</span> <span class="mi">100</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">LODWORD</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">=</span> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;No flower in the garden !&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">v1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>It is simple to print all the flowers in the garden with the condition that  <code>v1 &amp;&amp; *(_DWORD *)v1</code>, which also means v1 is the valid pointer (not null) and used in struct flower is set.</p>
+
+
+<h4 class="relative group">remove 
+    <div id="remove" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#remove" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">remove</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">_DWORD</span> <span class="o">*</span><span class="n">v1</span><span class="p">;</span> <span class="c1">// rax
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">index</span><span class="p">;</span> <span class="c1">// [rsp+4h] [rbp-14h] BYREF
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">unsigned</span> <span class="kr">__int64</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// [rsp+8h] [rbp-10h]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="n">v3</span> <span class="o">=</span> <span class="nf">__readfsqword</span><span class="p">(</span><span class="mh">0x28u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">count_flower</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;No flower in the garden&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">__printf_chk</span><span class="p">(</span><span class="mi">1LL</span><span class="p">,</span> <span class="s">&#34;Which flower do you want to remove from the garden:&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">__isoc99_scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">index</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span> <span class="n">index</span> <span class="o">&lt;=</span> <span class="mh">0x63</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">v1</span> <span class="o">=</span> <span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">garden</span><span class="p">[</span><span class="n">index</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">0LL</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">v1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                                    <span class="c1">// mark Flower = 0, but this function doesn&#39;t check it
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">free</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)(</span><span class="n">garden</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8LL</span><span class="p">));</span>      <span class="c1">// don&#39;t free Flower, only free name of Flower
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Successful&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Invalid choice&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This function takes input(index) from user and check <code>index &lt;= 0x63 &amp;&amp; (v1 = (_DWORD *)garden[index]) != 0LL </code>, then free this pointer to flower.</p>
+
+
+<h4 class="relative group">clean 
+    <div id="clean" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#clean" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">unsigned</span> <span class="kr">__int64</span> <span class="nf">clean</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">_QWORD</span> <span class="o">*</span><span class="n">v0</span><span class="p">;</span> <span class="c1">// rbx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">_DWORD</span> <span class="o">*</span><span class="n">v1</span><span class="p">;</span> <span class="c1">// rdi
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">unsigned</span> <span class="kr">__int64</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// [rsp+8h] [rbp-20h]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="n">v3</span> <span class="o">=</span> <span class="nf">__readfsqword</span><span class="p">(</span><span class="mh">0x28u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">v0</span> <span class="o">=</span> <span class="n">garden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v1</span> <span class="o">=</span> <span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="n">v0</span> <span class="o">&amp;&amp;</span> <span class="o">!*</span><span class="n">v1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">free</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span>                                 <span class="c1">// Also free Flower
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="o">*</span><span class="n">v0</span> <span class="o">=</span> <span class="mi">0LL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">--</span><span class="n">count_flower</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">++</span><span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span> <span class="n">v0</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">garden</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Done!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nf">__readfsqword</span><span class="p">(</span><span class="mh">0x28u</span><span class="p">)</span> <span class="o">^</span> <span class="n">v3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><em><strong>Loop all flower in the garden(from 0 to 100), check condition: <code>*v0 &amp;&amp; !*v1 </code></strong></em></p>
+
+
+<h4 class="relative group">exit 
+    <div id="exit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#exit" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p><em><strong>leave the program</strong></em></p>
+
+
+<h3 class="relative group">Exploitation 
+    <div id="exploitation-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#exploitation-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="n">index</span> <span class="o">&lt;=</span> <span class="mh">0x63</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">v1</span> <span class="o">=</span> <span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">garden</span><span class="p">[</span><span class="n">index</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">0LL</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">v1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                                    <span class="c1">// mark Flower = 0, but this function doesn&#39;t check it
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">free</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)(</span><span class="n">garden</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8LL</span><span class="p">));</span>      <span class="c1">// don&#39;t free Flower, only free name of Flower
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Successful&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><em><strong>free:</strong></em> <strong>not</strong> set <strong>ptr to null</strong> and check <strong>used to 0</strong>. -&gt; <strong>double free</strong> -&gt; <strong>arbitrary write primitives</strong></p>
+<p><em><strong>And free THE CHUNK STORE THE NAME OF THE FLOWER, NOT THE FLOWER.</strong></em></p>
+
+
+<h4 class="relative group">Leak libc 
+    <div id="leak-libc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#leak-libc" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p><strong>Notice that:</strong> in the raise() function, the program will malloc 0x28 (the chunk will have a size of 0x30) and I have one more time to request malloc with the size I input(for name of the flower).
+<strong>Target:</strong> <em>unsortedbin</em> + <em>remainder</em>.
+<strong>Example</strong></p>
+<ul>
+<li>I request 0x100 size for name (0x110 size for chunk) twice; the second is to ensure that the chunk will not consolidate with the top chunk.</li>
+<li>Then, free the first chunk</li>
+<li>Request 0xd8 size for name(0xe0 size for chunk)
+<ul>
+<li><strong>The reason</strong>: 0x30 + 0xe0 = 0x110</li>
+<li>First, the unsorted will take 0x30 in unsortedbin to request for the struct flower, and the request for the name in the second (0xe0) will allocate for the remain chunk.</li>
+<li>Write the name with length 8 to leak the address of unsortedbin when call printf()</li>
+</ul>
+</li>
+</ul>
+
+
+<h4 class="relative group">The result 
+    <div id="the-result" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-result" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p><strong>Before free</strong>
+
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/pwnable.tw/img/secrectgarden/before_free_hu8980726237596942167.png 330w,
+        /posts/pwnable.tw/img/secrectgarden/before_free_hu5192802060174559882.png 660w,
+        /posts/pwnable.tw/img/secrectgarden/before_free_hu12274886234970315583.png 1024w,
+        /posts/pwnable.tw/img/secrectgarden/before_free_hu5766921481825982119.png 2x"
+        src="/posts/pwnable.tw/img/secrectgarden/before_free_hu5192802060174559882.png"
+        alt="image"
+      />
+      
+    </figure>
+</p>
+<ul>
+<li>I don&rsquo;t know exactly what the chunk with size of 0x1011 is, but it is not important, so I will pass it.</li>
+</ul>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/pwnable.tw/img/secrectgarden/strange_hu3726022022955298342.png 330w,
+        /posts/pwnable.tw/img/secrectgarden/strange_hu10126234870857161699.png 660w,
+        /posts/pwnable.tw/img/secrectgarden/strange_hu5734374964747333744.png 1024w,
+        /posts/pwnable.tw/img/secrectgarden/strange_hu15652398969187286081.png 2x"
+        src="/posts/pwnable.tw/img/secrectgarden/strange_hu10126234870857161699.png"
+        alt="image"
+      />
+      
+    </figure>
+</p>
+<p><strong>After request to trigger</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/pwnable.tw/img/secrectgarden/after_free_hu1365422090061373653.png 330w,
+        /posts/pwnable.tw/img/secrectgarden/after_free_hu2030730586528195909.png 660w,
+        /posts/pwnable.tw/img/secrectgarden/after_free_hu13527123899351524787.png 1024w,
+        /posts/pwnable.tw/img/secrectgarden/after_free_hu3295414409768663144.png 2x"
+        src="/posts/pwnable.tw/img/secrectgarden/after_free_hu2030730586528195909.png"
+        alt="image"
+      />
+      
+    </figure>
+</p>
+<ul>
+<li>The first request for the struct flower.</li>
+</ul>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/pwnable.tw/img/secrectgarden/first_request_hu7994734717164822641.png 330w,
+        /posts/pwnable.tw/img/secrectgarden/first_request_hu9295243029819648447.png 660w,
+        /posts/pwnable.tw/img/secrectgarden/first_request_hu2364377311829236075.png 1024w,
+        /posts/pwnable.tw/img/secrectgarden/first_request_hu4717423576091668493.png 2x"
+        src="/posts/pwnable.tw/img/secrectgarden/first_request_hu9295243029819648447.png"
+        alt="image"
+      />
+      
+    </figure>
+</p>
+<ul>
+<li>
+<p>Next, request for the name of the flower.</p>
+</li>
+<li>
+<p>The next time I call visit(), it will leak the address of unsortedbin-&gt;leaklibc.</p>
+</li>
+<li>
+<p>Fastbin dup to trigger call system(&quot;/bin/sh&quot;): onegadget.</p>
+</li>
+<li>
+<p>First, I try to overwrite the malloc_hook with <strong>one gadet</strong>. Unless it fails, I will find other ways. Fortunately, it works.</p>
+</li>
+</ul>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/pwnable.tw/img/secrectgarden/one_gadget_hu4060787998844229358.png 330w,
+        /posts/pwnable.tw/img/secrectgarden/one_gadget_hu6572889780449561831.png 660w,
+        /posts/pwnable.tw/img/secrectgarden/one_gadget_hu8610473488993632547.png 1024w,
+        /posts/pwnable.tw/img/secrectgarden/one_gadget_hu3249632662766966752.png 2x"
+        src="/posts/pwnable.tw/img/secrectgarden/one_gadget_hu6572889780449561831.png"
+        alt="image"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">Payload 
+    <div id="payload-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#payload-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><a href="code/secrect_garden/solve.py">solve.py</a></p>
 
           
           
