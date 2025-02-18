@@ -8,7 +8,7 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
-logo = "img/avatar/beautifulEYES.jpg"
+# logo = "img/avatar/beautifulEYES.jpg"
 secondaryLogo = "img/secondarylogo/2.jpg"
 description = "Only those who embrace the art of learning truly thrive."
 # author = { name = "Broder", bio = "Only the ones who have a true passion for mastering security truly stand out.", image = "img/avatar/favor.jpg", headline = "Only those who embrace the art of learning truly thrive." }
@@ -22,7 +22,7 @@ copyright = "Doan Duc Anh was here"
     headline = "No love no life"
     bio = "Only the ones who have a true passion for mastering security truly stand out."
     links = [
-        { github = "https://github.com/BabyBroder" },
+        { github = "https://github.com/OdanBroder" },
         { telegram = "https://t.me/odanbroder" }
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },

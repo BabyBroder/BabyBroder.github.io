@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/race-condition/</guid>
       <description>Techniques for Exploiting Race Conditions</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/race-condition/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/race-condition/featured.jpg" />
     </item>
     
     <item>

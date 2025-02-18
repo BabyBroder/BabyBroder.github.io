@@ -1,4 +1,4 @@
-colorScheme = "terminal"
+colorScheme = "Terminal"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 enableSearch = true
